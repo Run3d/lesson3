@@ -47,3 +47,7 @@ store = {
 #     вывод на консоль количества и стоимости товара на складе
 
 # TODO здесь ваш код
+for item in goods:
+    id = goods[item]
+    print(item, id)
+    print(store[id])

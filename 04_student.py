@@ -11,4 +11,12 @@
 
 educational_grant, expenses = 10000, 12000
 
-# TODO здесь ваш код
+
+difference = expenses - educational_grant
+month = 2
+while month < 11:
+    expenses = expenses * 0.03 + expenses
+    difference = difference + expenses - educational_grant
+    month += 1
+difference = round(difference, 2)
+print('The student must ask for ', difference, ' rubles.')
