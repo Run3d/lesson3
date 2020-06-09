@@ -46,8 +46,16 @@ store = {
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
 
-# TODO здесь ваш код
+
 for item in goods:
     id = goods[item]
-    print(item, id)
-    print(store[id])
+    # print(item, id)
+    record = store[id]
+    # print(record)
+    amount = 0
+    cost = 0
+    for index in record:
+        amount = amount + index['quantity']
+        cost = cost + index['quantity'] * index['price']
+    print(item, ' are quantity = ', amount, ', id = ', id, ', and cost = ', cost)
+
